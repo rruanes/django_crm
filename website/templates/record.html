@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% block content%}
 
 <div class="card">
@@ -13,13 +12,15 @@
         <strong>ZipCode:</strong> {{ customer_record.zipcode }}</br>
         <strong>Phone:</strong> {{ customer_record.phone }}</br>
         <strong>Email:</strong> {{ customer_record.email }}</br>
+        <strong>Email:</strong> {{ customer_record.id }}</br>
    
     </div>
   </div>
 
   <br/><br/>
 <a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
-<a href="{% url 'delete_record' customer_record.id %}" class="btn btn-danger">Delete</a>
+<a href="{% url 'delete_record' customer_record.id %}" class="btn btn-danger">Delete Record</a>
+<a href="{% url 'update_record' customer_record.id %}" class="btn btn-secondary">Update Record</a>
     
  
 
